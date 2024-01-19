@@ -1,0 +1,483 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+
+/* main */
+#main header .header_top {
+	position: relative;
+	max-width: 1300px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 72px;
+	border-bottom: 1px solid #bbb;
+}
+
+#main header .header_top .utils {
+	display: flex;
+	align-items: center;
+	margin-left: 50px;
+}
+
+#main header .header_top .logo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background:url(https://yunj90287.github.io/resource/web_publisher/casestudy1/logo.png) no-repeat center center;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 300px;
+	height: 100px;
+}
+
+
+#main header .header_top .utils ul {
+	display: flex;
+	gap: 20px;
+}
+
+#main header .header_top .lang ul {
+	display: flex;
+}
+
+#main header .header_top .lang ul a {
+	display: block;
+	padding: 0 20px;
+	line-height: 30px;
+	border: 1px solid #fff;
+	color: #ccc;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+#main header .header_top .lang ul li.active a {
+	border: 1px solid #bbbbbb;
+	color: #000;
+}
+
+#main header .gnb_wrap {
+	border-bottom: 1px solid #bbb;
+	height: 64px;
+}
+
+#main header #gnb {
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	z-index: 1000;
+	transform: translateX(-50%);
+} 
+
+
+#main header #gnb > ul {
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+
+#main header #gnb > ul > li {
+	margin: 0 16px;
+}
+
+#main header #gnb > ul > li > a {
+	display: block;
+	font-size: 1.06em;
+	font-weight: 700;
+	line-height: 64px;
+	padding: 0 40px;
+	white-space: nowrap;
+}
+
+#main header #gnb.active > ul > li > a {
+	color: #999;
+}
+
+#main header #gnb > ul > li:hover > a,
+#main header #gnb > ul > li.active > a {
+	color: #000;
+}
+
+#main header #gnb li ul {
+	display: flex;
+	position: absolute;
+	left: 20px;
+	height: 0;
+	overflow: hidden;
+} 
+
+#main header #gnb li ul.active {
+	height: 40px;
+	transition: height 0.3s;
+}
+
+#main header #gnb li {
+	position: relative;
+}
+
+#main header #gnb li ul li a {
+	display: block;
+	padding: 0 5px;
+	line-height: 40px;
+	white-space: nowrap;
+	font-size: 0.88em;
+	color: #999;
+}
+
+#main header #gnb li ul li a:hover,
+#main header #gnb li ul li a:focus {
+	color: #000;
+}
+#main header #gnb li ul li:last-child a {
+	border-bottom: none;
+}
+
+header .menu_bg {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: #eaeaea;
+}
+header .menu_bg.active {
+	height: 40px;
+	transition: height 0.3s;
+}
+
+/* slider */
+.slider_wrap {
+	overflow: hidden;
+}
+
+.slider_wrap #main_slider {
+	margin-top: 80px;
+}
+
+#main_slider {
+	position: relative;
+	height: 658px;
+	overflow: visible;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+#main_slider .swiper-container {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#main_slider .swiper-container .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main_slider .swiper-container .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	min-width: 300px;
+}
+
+#main_slider .swiper-container .swiper-pagination {
+	position: absolute;
+	width: 0;
+	top: 50%;
+	white-space: nowrap;
+	left: 105%;
+	transform: translateY(-3%);
+	font-size: 0.88em;
+}
+
+#main_slider .swiper-container .swiper-pagination-current {
+	font-weight: 700;
+}
+
+#main_slider .controller a.prev {
+	display: block;
+	position: absolute;
+	left: -150px;
+	top: 50%;
+	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_slide_left_arrow.png) no-repeat;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	transform: translateY(-50%);
+}
+
+#main_slider .controller a.next {
+	display: block;
+	position: absolute;
+	right: -150px;
+	top: 50%;
+	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_slide_right_arrow.png) no-repeat;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	transform: translateY(-50%);
+}
+
+#main_slider .desc {
+	position: absolute;
+	height: 340px;
+	width: 540px;
+	top: 50%;
+	left: -100px;
+	background-color: rgba(255, 255, 255, 0.45);
+	z-index: 99;
+	padding: 66px 0 80px 0;
+	box-sizing: border-box;
+}
+
+#main_slider .desc h3 {
+	font-size: 3.13em;
+}
+
+#main_slider .desc h3 span{
+	display: block;
+}
+
+#main_slider .desc .sub_tit {
+	font-size: 1em;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	line-height: 1.5em;
+	color: #222;
+}
+
+#main_slider .desc a.mobile_more {
+	display: inline-block;
+	line-height: 35px;
+	padding: 0 5em;
+	background-color: #fff;
+	border: 1px solid #333;
+	border-radius: 20px;
+}
+
+/* tab */
+#tab {
+	position: absolute;
+	left: 0;
+	z-index: 10000;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+}
+
+#tab.open {
+	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_tab.png)no-repeat center center;
+}
+
+#tab.close {
+	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_close.png)no-repeat center center;
+}
+
+#mobile {
+	display: none;
+	position: fixed;
+	left: 0.625em;
+	top: 0;
+	z-index: 1000;
+	padding: 0 1.25em 1.875em 1.25em;
+	width: 52%;
+	min-width: 230px;
+	height: 100vh;
+	background-color: #fff;
+}
+#mobile.active {
+	display: block;
+}
+#mobile > ul {
+	margin-top: 15vh;
+	height: 70vh;
+	overflow-y: auto;
+}
+#mobile > ul > li {
+	border-top: 1px solid #eaeaea;
+}
+#mobile > ul > li:first-child {
+	border-top: none;
+}
+#mobile > ul > li > a {
+	display: block;
+	padding: 1.125em 0 1.125em 0.625em;
+	text-indent: 0.625em;
+	font-size: 1.16em;
+	font-weight: 700;
+}
+#mobile > ul > li.active > a {
+	background-color: #000;
+	color: #fff;
+}
+
+#mobile ul ul {
+	display: none;
+	padding: 0.375em 0;
+	background-color: #f4f4f4;
+}
+
+#mobile ul ul a {
+	display: block;
+	line-height: 2;
+	text-indent: 1.25em;
+}
+
+#mobile ul ul a:hover,
+#mobile ul ul a:focus {
+	text-decoration: underline;
+}
+
+/* dim */
+.dim {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 2;
+}
+.dim.active {
+	display: none;
+}
+
+
+@media only screen and (max-width: 1310px) {
+	#main header .header_top {
+		padding: 0 2em;
+	}
+
+	#tab {
+		left: 2em;
+	}
+
+}
+
+@media only screen and (max-width: 1110px) {
+	#main header .gnb_wrap {
+		display: none;
+	}
+
+	.slider_wrap #main_slider {
+		margin-top: 0;
+	}
+
+	#main_slider .swiper-container .swiper-pagination {
+		display: none;
+	}
+
+	#main_slider .controller {
+		display: none;
+	}
+
+	#main_slider {
+		height: 80vh;
+	}
+	#main_slider .desc {
+		width: 300px;
+		height: 140px;
+		left: 4%;
+		bottom: 0;
+		background-color: transparent;
+	}
+
+	#main_slider .desc h3 {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width: 800px){
+	header {
+		font-size: 0.875em;
+	}
+
+	header #tab {
+		margin-top: 5em;
+	}
+
+	header .header_top .utils a{
+		display: none;
+	}
+
+	header .header_top .lang{
+		display: none;
+	}
+
+	#main header .header_top {
+		height: 0;
+		border: 0;
+	}
+
+	#main header .header_top .logo{
+		top: auto;
+		left: auto;
+		transform: translate(0, 0);
+		right: 2em;
+		background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/m_logo.png) no-repeat center center;
+		width: 50px;
+		height: 50px;
+		z-index: 100;
+		margin-top: 1em;
+	}
+
+	#main_slider {
+		height: 100vh;
+	}
+
+	#main_slider .desc {
+		width: 300px;
+		height: 140px;
+		left: 4%;
+		bottom: 0;
+		background-color: transparent;
+	}
+	#main_slider .desc h3 {
+		font-size: 1.5em;
+	}
+
+	#main_slider .desc .sub_tit {
+		font-size: 0.8em;
+		margin-top: 33px;
+		line-height: 1.5em;
+	}
+
+	#main_slider .desc a.mobile_more {
+		padding: 0 2.5em;
+		font-size: 0.88em;
+	}
+
+	#gnb {
+		display: none;
+	}
+} 
