@@ -1,4 +1,40 @@
 $(function(){
+	const swiperData=[
+		{
+			title: ["PINK DIAMOND", "EDITION"],
+			sub : "NEW 핑크 다이아몬드",
+			button: "SHOP NOW"
+		},
+
+		{
+			title:["CERAMIC", "CUSHION"],
+			sub : "NEW 세라믹 스킨 쿠션 런칭",
+			button: "SHOP NOW"
+		},
+
+		{
+			title: ["MY AMUSE", "POUCH"],
+			sub : "나만의 아이코닉한 파우치의 완성",
+			button: "SHOP NOW",
+		},
+	];
+	function keytextFunction(n){
+		let mainData="";
+		let listData="";
+
+		for(let i=0; i<swiperData[n].title.length; i++){
+			listData+=`<span>${swiperData[n].title[i]}</span>`;
+		}
+
+		mainData=`
+			<h3>${listData}</h3>
+			<p class="sub_tit">${swiperData[n].sub}</p>
+			<a href="" class="mobile_more">${swiperData[n].button}</a>
+		`;
+
+		$(".desc .inner_html").html(mainData);
+	}
+
 	/* main slider */
 	const mainSwiper=new Swiper(".mainSwiper",{
 		loop: true,
@@ -9,11 +45,22 @@ $(function(){
 		autoplay: {
 		delay: 5000,
 		},
-		// breakpoints: {
-		// 	750: {
-		// 		slidesPerView: 3,
-		// 	}
-		  // },
+		on :{ 
+			init: function(){
+				mainCurrent=this.realIndex+1;
+				mainTotal=this.slides.length;
+				$("span.current").text(mainCurrent);
+				$("span.total").text(mainTotal);
+
+				keytextFunction(this.realIndex);
+			},
+			slideChange: function(){
+				mainCurrent=this.realIndex+1;
+				$("span.current").text(mainCurrent);
+
+				keytextFunction(this.realIndex);
+			}
+		}
 	});
 	$("#main_slider .prev").click(function(e){
 		e.preventDefault();

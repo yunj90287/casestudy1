@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
 	margin: 0;
 	padding: 0;
@@ -46,7 +47,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background:url(https://yunj90287.github.io/resource/web_publisher/casestudy1/logo.png) no-repeat center center;
+	background:url(../images/logo.png) no-repeat center center;
 	text-indent: -999px;
 	overflow: hidden;
 	width: 300px;
@@ -224,7 +225,7 @@ header .menu_bg.active {
 	position: absolute;
 	left: -150px;
 	top: 50%;
-	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_slide_left_arrow.png) no-repeat;
+	background: url(../images/icon_slide_left_arrow.png) no-repeat;
 	text-indent: -999px;
 	overflow: hidden;
 	width: 30px;
@@ -237,7 +238,7 @@ header .menu_bg.active {
 	position: absolute;
 	right: -150px;
 	top: 50%;
-	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_slide_right_arrow.png) no-repeat;
+	background: url(../images/icon_slide_right_arrow.png) no-repeat;
 	text-indent: -999px;
 	overflow: hidden;
 	width: 30px;
@@ -258,7 +259,7 @@ header .menu_bg.active {
 }
 
 #main_slider .desc h3 {
-	font-size: 3.13em;
+	font-size: 2.5em;
 }
 
 #main_slider .desc h3 span{
@@ -295,11 +296,11 @@ header .menu_bg.active {
 }
 
 #tab.open {
-	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_tab.png)no-repeat center center;
+	background: url(../images/icon_tab.png)no-repeat center center;
 }
 
 #tab.close {
-	background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/icon_close.png)no-repeat center center;
+	background: url(../images/icon_close.png)no-repeat center center;
 }
 
 #mobile {
@@ -369,7 +370,7 @@ header .menu_bg.active {
 	z-index: 2;
 }
 .dim.active {
-	display: none;
+	display: block;
 }
 
 
@@ -444,7 +445,7 @@ header .menu_bg.active {
 		left: auto;
 		transform: translate(0, 0);
 		right: 2em;
-		background: url(https://yunj90287.github.io/resource/web_publisher/casestudy1/m_logo.png) no-repeat center center;
+		background: url(../images/m_logo.png) no-repeat center center;
 		width: 50px;
 		height: 50px;
 		z-index: 100;
@@ -481,3 +482,5 @@ header .menu_bg.active {
 		display: none;
 	}
 } 
+
+
